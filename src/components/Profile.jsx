@@ -29,7 +29,6 @@ function Profile() {
             <p>Email: {user.data.email}</p>
             <p>Rol: {user.data.roles_id}</p>
             <p>Fecha de creación: {user.data.createdAt ? user.data.createdAt.slice(0, 10) : ''}</p>
-            {/* Agregar más detalles según sea necesario */}
           </div>
         )}
       </div>

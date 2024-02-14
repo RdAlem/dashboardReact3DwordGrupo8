@@ -12,7 +12,7 @@ function ProductsTable() {
     const fetchData = async () => {
         try {
             const response = await fetch('http://localhost:3017/api/products');
-            const productsData = await response.json(); // Parseamos la respuesta JSON
+            const productsData = await response.json(); // Pasamos la respuesta JSON
 
             setProducts(productsData.data);
             setTotalProducts(productsData.total);

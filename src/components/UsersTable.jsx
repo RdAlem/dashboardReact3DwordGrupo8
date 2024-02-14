@@ -20,6 +20,7 @@ function UsersTable() {
         }
     };
 
+    //para quue la fecha se vea bien
     const formatDate = (dateString) => {
         if (dateString) { 
             return dateString.slice(0, 10); 

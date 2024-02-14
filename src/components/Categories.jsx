@@ -12,7 +12,6 @@ function Categories() {
             const response = await fetch('http://localhost:3017/api/products');
             const productsData = await response.json();
 
-            // Crear un objeto para almacenar la cantidad de productos por categoría
             const categoryCount = {
                 'Categoria1': 0,
                 'Categoria2': 0,
@@ -20,14 +19,13 @@ function Categories() {
                 'Categoria4': 0
             };
 
-            // Calcular la cantidad de productos por categoría
             productsData.data.forEach(product => {
                 if (categoryCount.hasOwnProperty(product.size)) {
                     categoryCount[product.size]++;
                 }
             });
 
-            // Crear una lista de categorías con su cantidad de productos
+        
             const categoriesWithCount = Object.entries(categoryCount).map(([category, count]) => ({ category, count }));
 
             setCategories(categoriesWithCount);
